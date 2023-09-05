@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2F7"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/possiveis_compradores_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Possíveis compradores"
+        android:textSize="24sp"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textColor="#A9F5F2"
+        android:background="#088A85"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/possiveis_compradores_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#585858"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/possiveis_compradores_text"
+        app:layout_constraintStart_toEndOf="@id/btn_possiveis_compradores_menos"
+        app:layout_constraintEnd_toStartOf="@id/btn_possiveis_compradores_mais"/>
+
+    <Button
+        android:id="@+id/btn_possiveis_compradores_menos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_margin="16dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        android:textColor="#E0F8EC"
+        app:layout_constraintTop_toBottomOf="@id/possiveis_compradores_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_possiveis_compradores_mais"/>
+
+    <Button
+        android:id="@+id/btn_possiveis_compradores_mais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        android:layout_margin="16dp"
+        android:textColor="#E0F8EC"
+        app:layout_constraintTop_toBottomOf="@id/possiveis_compradores_text"
+        app:layout_constraintStart_toEndOf="@id/btn_possiveis_compradores_menos"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/vendas_realizadas_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vendas realizadas"
+        android:layout_marginTop="50dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:background="#086A87"
+        android:textColor="#CEECF5"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_possiveis_compradores_menos"/>
+
+    <TextView
+        android:id="@+id/vendas_realizadas_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#585858"
+        app:layout_constraintTop_toBottomOf="@id/vendas_realizadas_text"
+        app:layout_constraintStart_toEndOf="@id/btn_vendas_realizadas_menos"
+        app:layout_constraintEnd_toStartOf="@id/btn_vendas_realizadas_mais"/>
+
+    <Button
+        android:id="@+id/btn_vendas_realizadas_menos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        android:layout_margin="16dp"
+        android:textColor="#E0F8EC"
+        app:layout_constraintTop_toBottomOf="@id/vendas_realizadas_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_vendas_realizadas_mais"/>
+
+    <Button
+        android:id="@+id/btn_vendas_realizadas_mais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        android:layout_margin="16dp"
+        android:textColor="#E0F8EC"
+        app:layout_constraintTop_toBottomOf="@id/vendas_realizadas_text"
+        app:layout_constraintStart_toEndOf="@id/btn_vendas_realizadas_menos"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="0dp"
+        android:text="Zerar Contadores"
+        android:textColor="#E0F8EC"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
